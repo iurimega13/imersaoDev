@@ -1,2 +1,2 @@
-# jsRocket
-curso de js da rocketseat
+# ImersaoDev
+curso de javaScript
