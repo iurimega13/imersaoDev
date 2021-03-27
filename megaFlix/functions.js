@@ -3,7 +3,11 @@ function adicionarFilme(){
     var campoPosterFilme = document.querySelector('#posterFilme')
     var nomeFilme = campoFilmeFavorito.value
     var posterFilme = campoPosterFilme.value
-   listarFilmes(nomeFilme, posterFilme)
+    if (nomeFilme == "" | posterFilme == "") {
+      alert("Preencha todos os campos!!!!!!")
+    } else {
+      listarFilmes(nomeFilme, posterFilme)
+    }
     /* console.log(nomeFilme)
     console.log(posterFilme)
     */
