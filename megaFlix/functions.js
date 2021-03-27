@@ -7,6 +7,8 @@ function adicionarFilme(){
     /* console.log(nomeFilme)
     console.log(posterFilme)
     */
+   campoFilmeFavorito.value = ""
+   campoPosterFilme.value = ""
   }
   
   function listarFilmes(filme, poster){
