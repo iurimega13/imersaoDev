@@ -6,7 +6,6 @@ body {
     background-size: cover;
     background-position: center top;
     background-repeat: no-repeat;
-    background-attachment: fixed;
   }
   .container {
       text-align: center;
@@ -207,20 +206,15 @@ body {
   }
   
   #nome{
-    position: absolute;
-    bottom: 0;
-    width: 71%;
-    text-align: center;
-    bottom: 0;
-    background: rgb(0, 0, 0);
-    background: rgba(0, 0, 0, 0.5); /* Black see-through */
-    color: #f1f1f1;
-    transition: .5s ease;
-    opacity:0;
-    color: white;
-    font-size: 20px;
-    font-size: bold;
-    padding: 20px;
+    opacity: 0;
+  text-align: center;
+  bottom: 0px;
+  position: absolute;
+  background-color: rgba(0, 0, 0, .75);
+  width: 142px;
+  padding: 20px;
+  color: white;
+  transition: .6s;
   }
   
   #poster:hover #nome{
