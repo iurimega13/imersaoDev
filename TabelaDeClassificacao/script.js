@@ -14,5 +14,3 @@ var rafa = {
     pontos: 0
 }
 
-console.log(paulo);
-console.log(rafa);
