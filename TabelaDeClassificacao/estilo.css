@@ -42,6 +42,7 @@ html, body {
 table {
     border: 2px solid white;
     border-collapse: collapse;
+    background: rgba(0, 0, 0, 0.7);
 }
 
 h1 {
