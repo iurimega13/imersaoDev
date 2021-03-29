@@ -4,6 +4,8 @@
 }
 
 html, body {
+    width: auto;
+    height: auto;
     font-family: 'Roboto Mono', monospace;
     min-height: 400px;
     background-image: url('https://images.alphacoders.com/694/thumb-1920-694756.jpg');
