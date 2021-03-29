@@ -14,3 +14,9 @@ var rafa = {
     pontos: 0
 }
 
+rafa.pontos = calculaPontos(rafa)
+
+function calculaPontos(jogador) {
+    let pontos = (jogador.vitorias * 3) + jogador.empates
+    return pontos
+}
