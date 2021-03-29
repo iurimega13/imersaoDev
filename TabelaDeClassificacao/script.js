@@ -36,7 +36,10 @@ function exibirJogadorresNaTela(jogadores) {
         html += "<td>" + jogadores[i].vitorias + "</td>"
         html += "<td>" + jogadores[i].empates + "</td>"
         html += "<td>" + jogadores[i].derrotas + "</td>"
-        html += "<td>" + jogadores[i].pontos + "</td></tr>" 
+        html += "<td>" + jogadores[i].pontos + "</td>"
+        html += "<td><button onClick='adicionarVitoria(" + i + ")'>Vitória</button></td>"
+        html += "<td><button onClick='adicionarEmpate(" + i + ")'>Empate</button></td>"
+        html += "<td><button onClick='adicionarDerrota(" + i + ")'>Derrota</button></td></tr>"
     }
     
     var tabelaJogadores = document.getElementById("tabelaJogadores")
