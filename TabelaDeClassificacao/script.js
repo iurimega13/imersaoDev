@@ -8,7 +8,7 @@ var paulo = {
 
 var rafa = {
     nome: "rafa",
-    vitoris: 3,
+    vitorias: 3,
     empates: 5,
     derrotas: 2,
     pontos: 0
