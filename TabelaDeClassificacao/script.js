@@ -20,3 +20,25 @@ function calculaPontos(jogador) {
     let pontos = (jogador.vitorias * 3) + jogador.empates
     return pontos
 }
+
+
+
+var jogadores = [rafa, paulo]
+
+
+exibirJogadorresNaTela(jogadores)
+
+
+function exibirJogadorresNaTela(jogadores) {
+    var html = ""
+    for (let i = 0; i < jogadores.length; i++) {
+        html += "<tr><td>" + jogadores[i].nome + "</td>"
+        html += "<td>" + jogadores[i].vitorias + "</td>"
+        html += "<td>" + jogadores[i].empates + "</td>"
+        html += "<td>" + jogadores[i].derrotas + "</td>"
+        html += "<td>" + jogadores[i].pontos + "</td></tr>" 
+    }
+    
+    var tabelaJogadores = document.getElementById("tabelaJogadores")
+    tabelaJogadores.innerHTML = html
+}
