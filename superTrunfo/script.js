@@ -7,6 +7,7 @@ var cartaPaulo = {
         magia: 90
     }
 }
+
 var cartaRafa = {
     nome: "Bulbasaur",
     img: "https://img.17qq.com/images/gwkwkqwwy.jpeg",
@@ -16,6 +17,7 @@ var cartaRafa = {
         magia: 85
     }
 }
+
 var cartaGui = {
     nome: "Lord Darth Vader",
     img: "https://www.nerdsite.com.br/wp-content/uploads/2020/01/darth.jpg.webp",
@@ -26,6 +28,7 @@ var cartaGui = {
 
     }
 }
+
 var cartas = [cartaPaulo, cartaRafa, cartaGui]
 var cartaMaquina
 var cartaJogador
@@ -38,15 +41,14 @@ function sortearCarta() {
     while (numeroCartaJogador == numeroCartaMaquina) {
         var numeroCartaJogador = parseInt(Math.random() * 3)
     }
+
     cartaJogador = cartas[numeroCartaJogador]
-    console.log(cartaJogador);
 
     document.getElementById('btnSortear').disabled = true
     document.getElementById('btnJogar').disabled = false
 
     exibirCartaJogador()
     exibirCartaMaquina()
-    //exibirOpcoes()
 }
 
 function exibirCartaJogador() {
@@ -70,16 +72,6 @@ function exibirCartaMaquina() {
     divCartaMaquina.style.backgroundImage = `url(${cartaMaquina.img})`
     var nomeCarta = `<p class="carta-subtitle">${cartaMaquina.nome}</p>`
     divCartaMaquina.innerHTML = moldura + nomeCarta
-}
-
-function exibirOpcoes() {
-    var opcoes = document.getElementById('opcoes')
-    var opcoesTexto = ""
-    for (var atributo in cartaJogador.atributos) {
-        opcoesTexto += "<input type='radio' name='atributo' value='" + atributo + "'>" + atributo
-    }
-    console.log(opcoesTexto);
-    opcoes.innerHTML = opcoesTexto
 }
 
 function obtemAtributoSelecionado() {
