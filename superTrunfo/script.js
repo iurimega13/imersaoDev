@@ -84,13 +84,17 @@ function obtemAtributoSelecionado() {
 }
 
 function jogar() {
+    var divResultado = document.getElementById('resultado')
     var atributSelecionado = obtemAtributoSelecionado()
-    console.log(atributSelecionado);
+
     if (cartaJogador.atributos[atributSelecionado] > cartaMaquina.atributos[atributSelecionado]) {
-        console.log("Venceu");
+        var htmlResultado = `<p class="resultado-final"> Venceu!!!</p>`
+        divResultado.innerHTML = htmlResultado
     } else if (cartaJogador.atributos[atributSelecionado] < cartaMaquina.atributos[atributSelecionado]) {
-        console.log("perdeu");
+        var htmlResultado = `<p class="resultado-final"> Perdeu!!!</p>`
+        divResultado.innerHTML = htmlResultado
     } else {
-        console.log("Empate");
+        var htmlResultado = `<p class="resultado-final"> Empate!!!</p>`
+        divResultado.innerHTML = htmlResultado
     }
 }
