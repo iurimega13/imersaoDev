@@ -26,9 +26,9 @@ var cartaGui = {
 
     }
 }
+var cartas = [cartaPaulo, cartaRafa, cartaGui]
 var cartaMaquina
 var cartaJogador
-var cartas = [cartaPaulo, cartaRafa, cartaGui]
 
 function sortearCarta() {
     var numeroCartaMaquina = parseInt(Math.random() * 3)
@@ -43,7 +43,33 @@ function sortearCarta() {
 
     document.getElementById('btnSortear').disabled = true
     document.getElementById('btnJogar').disabled = false
-    exibirOpcoes()
+
+    exibirCartaJogador()
+    exibirCartaMaquina()
+    //exibirOpcoes()
+}
+
+function exibirCartaJogador() {
+    var divCartaJogador = document.getElementById('carta-jogador')
+    var moldura = '<img src="https://www.alura.com.br/assets/img/imersoes/dev-2021/card-super-trunfo-transparent-ajustado.png" style=" width: inherit; height: inherit; position: absolute;">'
+    divCartaJogador.style.backgroundImage = `url(${cartaJogador.img})`
+    var nomeCarta = `<p class="carta-subtitle">${cartaJogador.nome}</p>`
+    var opcoesTexto = ""
+
+    for (var atributo in cartaJogador.atributos) {
+        opcoesTexto += "<input type='radio' name='atributo' value='" + atributo + "'>" + atributo + ": " + cartaJogador.atributos[atributo] + "\n"
+    }
+
+    var html = "<div id='opcoes' class='carta-status'>"
+
+    divCartaJogador.innerHTML = moldura + nomeCarta + html + opcoesTexto + '</div>'
+}
+function exibirCartaMaquina() {
+    var divCartaMaquina = document.getElementById('carta-maquina')
+    var moldura = '<img src="https://www.alura.com.br/assets/img/imersoes/dev-2021/card-super-trunfo-transparent-ajustado.png" style=" width: inherit; height: inherit; position: absolute;">'
+    divCartaMaquina.style.backgroundImage = `url(${cartaMaquina.img})`
+    var nomeCarta = `<p class="carta-subtitle">${cartaMaquina.nome}</p>`
+    divCartaMaquina.innerHTML = moldura + nomeCarta
 }
 
 function exibirOpcoes() {
