@@ -67,9 +67,9 @@ function jogar() {
     console.log(atributSelecionado);
     if (cartaJogador.atributos[atributSelecionado] > cartaMaquina.atributos[atributSelecionado]) {
         console.log("Venceu");
-    } else if (cartaJogador.atributos[atributSelecionado] < cartaMaquina.atributos[atributSelecionado]){
-        console.log("perdeu"); 
-    } else{
+    } else if (cartaJogador.atributos[atributSelecionado] < cartaMaquina.atributos[atributSelecionado]) {
+        console.log("perdeu");
+    } else {
         console.log("Empate");
     }
 }
