@@ -1,5 +1,6 @@
 var cartaPaulo = {
     nome: "Seiya de pegaso",
+    img: "http://2.bp.blogspot.com/-G16mpres2qY/UkI3ipzrRUI/AAAAAAAAE-I/7O9j4-xvOAQ/s1600/Seiyapegaso.jpg",
     atributos: {
         ataque: 80,
         defesa: 65,
@@ -8,6 +9,7 @@ var cartaPaulo = {
 }
 var cartaRafa = {
     nome: "Bulbasaur",
+    img: "https://img.17qq.com/images/gwkwkqwwy.jpeg",
     atributos: {
         ataque: 70,
         defesa: 65,
@@ -16,6 +18,7 @@ var cartaRafa = {
 }
 var cartaGui = {
     nome: "Lord Darth Vader",
+    img: "https://www.nerdsite.com.br/wp-content/uploads/2020/01/darth.jpg.webp",
     atributos: {
         ataque: 88,
         defesa: 65,
