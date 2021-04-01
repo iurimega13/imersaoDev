@@ -30,7 +30,6 @@ var cartas = [cartaPaulo, cartaRafa, cartaGui]
 function sortearCarta() {
     var numeroCartaMaquina = parseInt(Math.random() * 3)
     cartaMaquina = cartas[numeroCartaMaquina]
-    console.log(cartaMaquina);
 
     var numeroCartaJogador = parseInt(Math.random() * 3)
     while (numeroCartaJogador == numeroCartaMaquina) {
@@ -41,4 +40,16 @@ function sortearCarta() {
 
     document.getElementById('btnSortear').disabled = true
     document.getElementById('btnJogar').disabled = false
+    exibirOpcoes()
 }
+
+function exibirOpcoes() {
+    var opcoes = document.getElementById('opcoes')
+    var opcoesTexto = ""
+    for (var atributo in cartaJogador.atributos) {
+        opcoesTexto += "<input type='radio' nome='atributo' value='" + atributo + "'>" + atributo
+    }
+    console.log(opcoesTexto);
+    opcoes.innerHTML = opcoesTexto
+}
+
