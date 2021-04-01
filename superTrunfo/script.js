@@ -53,3 +53,11 @@ function exibirOpcoes() {
     opcoes.innerHTML = opcoesTexto
 }
 
+function obtemAtributoSelecionado() {
+    var radioAtributo = document.getElementsByName('atributo')
+    for (let i = 0; i < radioAtributo.length; i++) {
+        if (radioAtributo[i].checked) {
+            return radioAtributo[i].value
+        }
+    }
+}
