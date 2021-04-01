@@ -2,7 +2,7 @@ var cartaPaulo = {
     nome: "Seiya de pegaso",
     atributos: {
         ataque: 80,
-        defesa: 60,
+        defesa: 65,
         magia: 90
     }
 }
@@ -18,7 +18,7 @@ var cartaGui = {
     nome: "Lord Darth Vader",
     atributos: {
         ataque: 88,
-        defesa: 62,
+        defesa: 65,
         magia: 90
 
     }
@@ -47,7 +47,7 @@ function exibirOpcoes() {
     var opcoes = document.getElementById('opcoes')
     var opcoesTexto = ""
     for (var atributo in cartaJogador.atributos) {
-        opcoesTexto += "<input type='radio' nome='atributo' value='" + atributo + "'>" + atributo
+        opcoesTexto += "<input type='radio' name='atributo' value='" + atributo + "'>" + atributo
     }
     console.log(opcoesTexto);
     opcoes.innerHTML = opcoesTexto
@@ -59,5 +59,17 @@ function obtemAtributoSelecionado() {
         if (radioAtributo[i].checked) {
             return radioAtributo[i].value
         }
+    }
+}
+
+function jogar() {
+    var atributSelecionado = obtemAtributoSelecionado()
+    console.log(atributSelecionado);
+    if (cartaJogador.atributos[atributSelecionado] > cartaMaquina.atributos[atributSelecionado]) {
+        console.log("Venceu");
+    } else if (cartaJogador.atributos[atributSelecionado] < cartaMaquina.atributos[atributSelecionado]){
+        console.log("perdeu"); 
+    } else{
+        console.log("Empate");
     }
 }
