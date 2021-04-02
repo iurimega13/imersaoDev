@@ -1,0 +1,51 @@
+body {
+    font-family: 'Syne Mono', monospace;
+    background-color: #f9857f;
+}
+
+section {
+    display: block;
+    margin-top: 5%;
+    background-color: #a03328;
+    padding: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 500px;
+    border-radius: 5px;
+    -webkit-box-shadow: 7px 9px 3px 3px rgba(0, 0, 0, 0.7);
+    box-shadow: 7px 9px 3px 3px rgba(0, 0, 0, 0.7);
+}
+
+section h1, a {
+    color: black;
+    text-align: center;
+}
+
+header {
+    background-image: url('https://raw.githubusercontent.com/iurimega13/configs/master/wallpapers/pixelArt/943385.png');
+    background-size: cover;
+}
+
+h2 {
+    text-align: center;
+}
+
+div {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    margin: 15px;
+    border-radius: 5px;
+    background-color: rgb(229, 42, 24);
+    border: 1px solid black;
+}
+
+img {
+    margin-right: auto;
+    margin-left: auto;
+    display: block;
+    transform: translatey(-90px);
+    width: 150px;
+    height: 150px;
+    border-radius: 100%;
+}
