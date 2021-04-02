@@ -176,9 +176,11 @@ function jogar() {
     if (cartas.length == 0) {
         alert("Fim de jogo!!")
         if (pontosJogador > pontosMaquina) {
-            alert(htmlResultado = '<p class="resultado-final">Vôce ganhou o jogo!!!!!!</p>')
-        } else {
-            alert(htmlResultado = '<p class="resultado-final">Vôce perdeu o jogo!!!!!!</p>')
+            htmlResultado = '<p class="resultado-final">Vôce ganhou o jogo!!!!!!</p>'
+        } else if (pontosJogador < pontosMaquina) {
+            htmlResultado = '<p class="resultado-final">Vôce perdeu o jogo!!!!!!</p>'
+        }else {
+            htmlResultado = '<p class="resultado-final">Empatou!!!!!!</p>'
         }
     }else{
         document.getElementById('btnProximaRodada').disabled = false
