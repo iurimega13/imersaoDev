@@ -177,10 +177,13 @@ function jogar() {
         alert("Fim de jogo!!")
         if (pontosJogador > pontosMaquina) {
             htmlResultado = '<p class="resultado-final">Vôce ganhou o jogo!!!!!!</p>'
+            divResultado.innerHTML = htmlResultado
         } else if (pontosJogador < pontosMaquina) {
             htmlResultado = '<p class="resultado-final">Vôce perdeu o jogo!!!!!!</p>'
+            divResultado.innerHTML = htmlResultado
         }else {
             htmlResultado = '<p class="resultado-final">Empatou!!!!!!</p>'
+            divResultado.innerHTML = htmlResultado
         }
     }else{
         document.getElementById('btnProximaRodada').disabled = false
