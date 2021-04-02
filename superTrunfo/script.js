@@ -168,6 +168,7 @@ function jogar() {
         divResultado.innerHTML = htmlResultado
     }
     document.getElementById('btnJogar').disabled = true
+    document.getElementById('btnProximaRodada').disabled = false
     exibirCartaMaquina()
     atualizaPlacar()
 }
