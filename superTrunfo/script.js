@@ -159,17 +159,15 @@ function jogar() {
         pontosJogador++
         var htmlResultado = `<p class="resultado-final"> Venceu!!!</p>`
         divResultado.innerHTML = htmlResultado
-        document.getElementById('btnJogar').disabled = true
     } else if (cartaJogador.atributos[atributSelecionado] < cartaMaquina.atributos[atributSelecionado]) {
         pontosMaquina++
         var htmlResultado = `<p class="resultado-final"> Perdeu!!!</p>`
         divResultado.innerHTML = htmlResultado
-        document.getElementById('btnJogar').disabled = true
     } else {
         var htmlResultado = `<p class="resultado-final"> Empate!!!</p>`
         divResultado.innerHTML = htmlResultado
-        document.getElementById('btnJogar').disabled = true
     }
+    document.getElementById('btnJogar').disabled = true
     exibirCartaMaquina()
     atualizaPlacar()
 }
