@@ -172,8 +172,19 @@ function jogar() {
         var htmlResultado = `<p class="resultado-final"> Empate!!!</p>`
         divResultado.innerHTML = htmlResultado
     }
+
+    if (cartas.length == 0) {
+        alert("Fim de jogo!!")
+        if (pontosJogador > pontosMaquina) {
+            alert("Parabens!!!!!!! Vôce ganhou o jogo!!!!!!")
+        } else {
+            alert("Parabens!!!!!!! Vôce perdeu o jogo!!!!!!")
+        }
+    }else{
+        document.getElementById('btnProximaRodada').disabled = false
+    }
+
     document.getElementById('btnJogar').disabled = true
-    document.getElementById('btnProximaRodada').disabled = false
     exibirCartaMaquina()
     atualizaPlacar()
 }
