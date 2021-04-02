@@ -179,5 +179,11 @@ function jogar() {
 }
 
 function proximaRodada(){
-    
+    var divCartas = document.getElementById('cartas')
+    divCartas.innerHTML = `<div id="carta-jogador" class="carta"></div><div id="carta-maquina" class="carta"></div> `
+    document.getElementById('btnProximaRodada').disabled = true
+
+    var divResultado = document.getElementById('resultado')
+    divResultado.innerHTML = ""
+    sortearCarta()
 }
