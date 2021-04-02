@@ -112,7 +112,7 @@ function sortearCarta() {
 
     document.getElementById('btnSortear').disabled = true
     document.getElementById('btnJogar').disabled = false
-
+    atualizaQuantidadeDeCartas()
     exibirCartaJogador()
 }
 
