@@ -102,15 +102,13 @@ function atualizaQuantidadeDeCartas() {
 }
 
 function sortearCarta() {
-    var numeroCartaMaquina = parseInt(Math.random() * 8)
+    var numeroCartaMaquina = parseInt(Math.random() * cartas.length)
     cartaMaquina = cartas[numeroCartaMaquina]
-
-    var numeroCartaJogador = parseInt(Math.random() * 8)
-    while (numeroCartaJogador == numeroCartaMaquina) {
-        var numeroCartaJogador = parseInt(Math.random() * 8)
-    }
-
+    cartas.splice(numeroCartaMaquina, 1)
+    
+    var numeroCartaJogador = parseInt(Math.random() * cartas.length)
     cartaJogador = cartas[numeroCartaJogador]
+    cartas.splice(numeroCartaJogador, 1)
 
     document.getElementById('btnSortear').disabled = true
     document.getElementById('btnJogar').disabled = false
