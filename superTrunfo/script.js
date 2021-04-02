@@ -48,7 +48,6 @@ function sortearCarta() {
     document.getElementById('btnJogar').disabled = false
 
     exibirCartaJogador()
-    exibirCartaMaquina()
 }
 
 function exibirCartaJogador() {
@@ -57,9 +56,9 @@ function exibirCartaJogador() {
     divCartaJogador.style.backgroundImage = `url(${cartaJogador.img})`
     var nomeCarta = `<p class="carta-subtitle">${cartaJogador.nome}</p>`
     var opcoesTexto = ""
-
+    
     for (var atributo in cartaJogador.atributos) {
-        opcoesTexto += "<input type='radio' name='atributo' value='" + atributo + "'>" + atributo + ": " + cartaJogador.atributos[atributo] + "\n"
+        opcoesTexto += "<input type='radio' name='atributo' value='" + atributo + "'>" + atributo + ": " + cartaJogador.atributos[atributo] + "</br>"
     }
 
     var html = "<div id='opcoes' class='carta-status'>"
@@ -71,7 +70,15 @@ function exibirCartaMaquina() {
     var moldura = '<img src="https://www.alura.com.br/assets/img/imersoes/dev-2021/card-super-trunfo-transparent-ajustado.png" style=" width: inherit; height: inherit; position: absolute;">'
     divCartaMaquina.style.backgroundImage = `url(${cartaMaquina.img})`
     var nomeCarta = `<p class="carta-subtitle">${cartaMaquina.nome}</p>`
-    divCartaMaquina.innerHTML = moldura + nomeCarta
+    var opcoesTexto = ""
+
+    for (var atributo in cartaMaquina.atributos) {
+        opcoesTexto += "<p type='radio' name='atributo' value='" + atributo + "'>" + atributo + ": " + cartaMaquina.atributos[atributo] + "</br>"
+    }
+
+    var html = "<div id='opcoes' class='carta-status'>"
+    
+    divCartaMaquina.innerHTML = moldura + nomeCarta + html + opcoesTexto + '</div>'
 }
 
 function obtemAtributoSelecionado() {
@@ -86,7 +93,7 @@ function obtemAtributoSelecionado() {
 function jogar() {
     var divResultado = document.getElementById('resultado')
     var atributSelecionado = obtemAtributoSelecionado()
-
+    
     if (cartaJogador.atributos[atributSelecionado] > cartaMaquina.atributos[atributSelecionado]) {
         var htmlResultado = `<p class="resultado-final"> Venceu!!!</p>`
         divResultado.innerHTML = htmlResultado
