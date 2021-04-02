@@ -162,23 +162,23 @@ function jogar() {
     
     if (cartaJogador.atributos[atributSelecionado] > cartaMaquina.atributos[atributSelecionado]) {
         pontosJogador++
-        var htmlResultado = `<p class="resultado-final"> Venceu!!!</p>`
+        var htmlResultado = '<p class="resultado-final"> Venceu!!!</p>'
         divResultado.innerHTML = htmlResultado
     } else if (cartaJogador.atributos[atributSelecionado] < cartaMaquina.atributos[atributSelecionado]) {
         pontosMaquina++
-        var htmlResultado = `<p class="resultado-final"> Perdeu!!!</p>`
+        var htmlResultado = '<p class="resultado-final"> Perdeu!!!</p>'
         divResultado.innerHTML = htmlResultado
     } else {
-        var htmlResultado = `<p class="resultado-final"> Empate!!!</p>`
+        var htmlResultado = '<p class="resultado-final"> Empate!!!</p>'
         divResultado.innerHTML = htmlResultado
     }
 
     if (cartas.length == 0) {
         alert("Fim de jogo!!")
         if (pontosJogador > pontosMaquina) {
-            alert("Parabens!!!!!!! Vôce ganhou o jogo!!!!!!")
+            alert(htmlResultado = '<p class="resultado-final">Vôce ganhou o jogo!!!!!!</p>')
         } else {
-            alert("Parabens!!!!!!! Vôce perdeu o jogo!!!!!!")
+            alert(htmlResultado = '<p class="resultado-final">Vôce perdeu o jogo!!!!!!</p>')
         }
     }else{
         document.getElementById('btnProximaRodada').disabled = false
