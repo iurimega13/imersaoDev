@@ -31,7 +31,7 @@ var cartaGui = {
 
 var cartaLol = {
     nome: "Caitlyn",
-    imagem: "http://1.bp.blogspot.com/-K7CbqWc1-p0/VLc98v85s0I/AAAAAAAABqk/-ZB684VVHbg/s1600/Caitlyn_OriginalSkin.jpg",
+    img: "http://1.bp.blogspot.com/-K7CbqWc1-p0/VLc98v85s0I/AAAAAAAABqk/-ZB684VVHbg/s1600/Caitlyn_OriginalSkin.jpg",
     atributos: {
         ataque: 95,
         defesa: 40,
@@ -41,7 +41,7 @@ var cartaLol = {
 
 var cartaNaruto = {
     nome: "Naruto",
-    imagem: "https://conteudo.imguol.com.br/c/entretenimento/16/2017/06/27/naruto-1498593686428_v2_450x337.png",
+    img: "https://conteudo.imguol.com.br/c/entretenimento/16/2017/06/27/naruto-1498593686428_v2_450x337.png",
     atributos: {
         ataque: 80,
         defesa: 60,
@@ -51,7 +51,7 @@ var cartaNaruto = {
 
 var cartaHarry = {
     nome: "Harry Potter",
-    imagem: "https://sm.ign.com/ign_br/screenshot/default/89ff10dd-aa41-4d17-ae8f-835281ebd3fd_49hp.jpg",
+    img: "https://sm.ign.com/ign_br/screenshot/default/89ff10dd-aa41-4d17-ae8f-835281ebd3fd_49hp.jpg",
     atributos: {
         ataque: 70,
         defesa: 50,
@@ -61,7 +61,7 @@ var cartaHarry = {
 
 var cartaBatman = {
     nome: "Batman",
-    imagem: "https://assets.b9.com.br/wp-content/uploads/2020/09/Batman-issue86-heder-1280x677.jpg",
+    img: "https://assets.b9.com.br/wp-content/uploads/2020/09/Batman-issue86-heder-1280x677.jpg",
     atributos: {
         ataque: 95,
         defesa: 70,
@@ -71,7 +71,7 @@ var cartaBatman = {
 
 var cartaMarvel = {
     nome: "Capitã Marvel",
-    imagem: "https://cinepop.com.br/wp-content/uploads/2018/09/capitamarvel21.jpg",
+    img: "https://cinepop.com.br/wp-content/uploads/2018/09/capitamarvel21.jpg",
     atributos: {
         ataque: 90,
         defesa: 80,
@@ -170,6 +170,6 @@ function jogar() {
         divResultado.innerHTML = htmlResultado
         document.getElementById('btnJogar').disabled = true
     }
-    exibeCartaMaquina()
+    exibirCartaMaquina()
     atualizaPlacar()
 }
