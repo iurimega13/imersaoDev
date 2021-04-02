@@ -83,13 +83,24 @@ var cartas = [cartaPaulo, cartaRafa, cartaGui, cartaLol, cartaNaruto, cartaHarry
 var cartaMaquina
 var cartaJogador
 
+var pontosJogador = 0
+var pontosMaquina = 0
+
+atualizaPlacar()
+
+function atualizaPlacar() {
+    var divPlacar = document.getElementById('placar')
+    var html = `Jogador ${pontosJogador} / ${pontosMaquina} Máquina`
+    divPlacar.innerHTML = html
+}
+
 function sortearCarta() {
-    var numeroCartaMaquina = parseInt(Math.random() * 3)
+    var numeroCartaMaquina = parseInt(Math.random() * 8)
     cartaMaquina = cartas[numeroCartaMaquina]
 
-    var numeroCartaJogador = parseInt(Math.random() * 3)
+    var numeroCartaJogador = parseInt(Math.random() * 8)
     while (numeroCartaJogador == numeroCartaMaquina) {
-        var numeroCartaJogador = parseInt(Math.random() * 3)
+        var numeroCartaJogador = parseInt(Math.random() * 8)
     }
 
     cartaJogador = cartas[numeroCartaJogador]
@@ -145,13 +156,20 @@ function jogar() {
     var atributSelecionado = obtemAtributoSelecionado()
     
     if (cartaJogador.atributos[atributSelecionado] > cartaMaquina.atributos[atributSelecionado]) {
+        pontosJogador++
         var htmlResultado = `<p class="resultado-final"> Venceu!!!</p>`
         divResultado.innerHTML = htmlResultado
+        document.getElementById('btnJogar').disabled = true
     } else if (cartaJogador.atributos[atributSelecionado] < cartaMaquina.atributos[atributSelecionado]) {
+        pontosMaquina++
         var htmlResultado = `<p class="resultado-final"> Perdeu!!!</p>`
         divResultado.innerHTML = htmlResultado
+        document.getElementById('btnJogar').disabled = true
     } else {
         var htmlResultado = `<p class="resultado-final"> Empate!!!</p>`
         divResultado.innerHTML = htmlResultado
+        document.getElementById('btnJogar').disabled = true
     }
+    exibeCartaMaquina()
+    atualizaPlacar()
 }
