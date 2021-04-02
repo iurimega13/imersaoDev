@@ -87,11 +87,18 @@ var pontosJogador = 0
 var pontosMaquina = 0
 
 atualizaPlacar()
+atualizaQuantidadeDeCartas()
 
 function atualizaPlacar() {
     var divPlacar = document.getElementById('placar')
     var html = `Jogador ${pontosJogador} / ${pontosMaquina} Máquina`
     divPlacar.innerHTML = html
+}
+
+function atualizaQuantidadeDeCartas() {
+    var divQuantidadeCartas = document.getElementById('quantidade-cartas')
+    var html = `Quantidade de cartas no jogo: ${cartas.length}`
+    divQuantidadeCartas.innerHTML = html
 }
 
 function sortearCarta() {
@@ -171,4 +178,8 @@ function jogar() {
     document.getElementById('btnProximaRodada').disabled = false
     exibirCartaMaquina()
     atualizaPlacar()
+}
+
+function proximaRodada(){
+    
 }
