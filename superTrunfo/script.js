@@ -118,7 +118,7 @@ function sortearCarta() {
 
 function exibirCartaJogador() {
     var divCartaJogador = document.getElementById('carta-jogador')
-    var moldura = '<img src="https://www.alura.com.br/assets/img/imersoes/dev-2021/card-super-trunfo-transparent-ajustado.png" style=" width: inherit; height: inherit; position: absolute;">'
+    var moldura = '<img src="https://www.alura.com.br/assets/img/imersoes/dev-2021/card-super-trunfo-transparent.png" style=" width: inherit; height: inherit; position: absolute;">'
     divCartaJogador.style.backgroundImage = `url(${cartaJogador.img})`
     var nomeCarta = `<p class="carta-subtitle">${cartaJogador.nome}</p>`
     var opcoesTexto = ""
@@ -133,7 +133,7 @@ function exibirCartaJogador() {
 }
 function exibirCartaMaquina() {
     var divCartaMaquina = document.getElementById('carta-maquina')
-    var moldura = '<img src="https://www.alura.com.br/assets/img/imersoes/dev-2021/card-super-trunfo-transparent-ajustado.png" style=" width: inherit; height: inherit; position: absolute;">'
+    var moldura = '<img src="https://www.alura.com.br/assets/img/imersoes/dev-2021/card-super-trunfo-transparent.png" style=" width: inherit; height: inherit; position: absolute;">'
     divCartaMaquina.style.backgroundImage = `url(${cartaMaquina.img})`
     var nomeCarta = `<p class="carta-subtitle">${cartaMaquina.nome}</p>`
     var opcoesTexto = ""
