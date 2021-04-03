@@ -16,7 +16,7 @@ section {
     box-shadow: 7px 9px 3px 3px rgba(0, 0, 0, 0.7);
 }
 
-section h1, a {
+section h1, .nome {
     color: black;
     text-align: center;
 }
@@ -30,7 +30,7 @@ h2 {
     text-align: center;
 }
 
-div {
+.insignias {
     margin-left: auto;
     margin-right: auto;
     display: block;
@@ -39,8 +39,11 @@ div {
     background-color: rgb(229, 42, 24);
     border: 1px solid black;
 }
+ol{
+    list-style: none;
+}
 
-img {
+.avatar {
     margin-right: auto;
     margin-left: auto;
     display: block;
@@ -48,4 +51,27 @@ img {
     width: 150px;
     height: 150px;
     border-radius: 100%;
+    border: 5px solid #a03328;
+}
+
+.logos{
+    width: 30px;
+    height: 30px;
+    transform: translatey(+10px);
+}
+.twitter{
+    color: black;
+    margin-left: 20%;
+    padding: 5px;
+    background-color: rgb(229, 42, 24);
+    border-radius: 5px;
+    border: 1px solid black;
+}
+.linkedin{
+    color: black;
+    margin-left: 20%;
+    padding: 5px;
+    background-color: rgb(229, 42, 24);
+    border-radius: 5px;
+    border: 1px solid black;
 }
