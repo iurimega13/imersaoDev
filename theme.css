@@ -42,7 +42,9 @@ h2 {
 ol{
     list-style: none;
 }
-
+.projetos{
+    color: black;
+}
 .avatar {
     margin-right: auto;
     margin-left: auto;
